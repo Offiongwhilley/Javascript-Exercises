@@ -7,9 +7,19 @@
 
 // console.log(countBs('BuBBles'))
 
-let a = 1;
-let b = 2;
+let personProperty = {
+    skinColor: 'black',
+    place:{
+        country: 'Nigeria',
+        city: 'Abuja'
+    },
+    language: 'English'
+}
 
-[a, b] = [b, a];
+// console.log(place.country) //Uncaught ReferenceError: Cannot access 'place' before initialization
+    
 
-console.log(a, b);
+let {place, language} = personProperty
+
+console.log(place, language) //{country: 'Nigeria', city: 'Abuja'} 'English';
+console.log(place.country)
