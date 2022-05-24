@@ -13,11 +13,14 @@ const anotherArr = [0, ...arr]
 console.log(newArr); //[1, 2, 3, 4, 5]
 console.log(anotherArr); //[0, 1, 2, 3]
 
-//So it doesnt have to be the last element in the array, unlike the rest operator. It can be used anywhere, provided it is on the right hand of the operator
+//So it doesnt have to be the last element in the array, unlike the rest operator. It can be used anywhere, provided it is on the right hand side of the operator
 
-//Note that if you pass in an array into another array without the rest operator(...), it will return is nested array. E.g:
+//I noticed that in array destructuring, you dont need to use the let or const keyword.Youjust do [a, b] = arr. Whereas, in rest and spread operators, you do need the let or const keyword. let [a, b, ...others] = array. Interesting!
+
+//Note that if you pass in an array into another array without the spread operator(...), it will return a nested array. E.g:
 const yestAnotherArr = [0, arr];
 console.log(yestAnotherArr); //[0, [123]]
+
 
 
 //There are two important uses/use cases of the spread operator:
@@ -37,3 +40,5 @@ const secondArr = ['orange'];
 const mergeArr = [...firstArr, ...secondArr];
 
 console.log(mergeArr); //(3) ['mango', 'orange', 'orange']
+
+//Q: where can you use the spread oerator? On all iterables. Iterables include: arrays, strings, maps and sets. OBJECTS ARE NOT ITERABLES

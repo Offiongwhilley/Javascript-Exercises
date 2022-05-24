@@ -19,7 +19,6 @@ let person2 = {name2: "Sarah", country2: "Nigeria", job2: "Developer"};
 
 //This will return error
 {name2, country2, job2} = person2;
-console.log(name2);
 
 console.log(name2); //Unexpected token '='
 
@@ -39,7 +38,7 @@ console.log(job2);//Developer"
 //The above method is shorter and easier.
 
 
-//It is also valid to assign variables to an object that haven't been declared:
+//It is also valid to assign variables to an object that hasn't been declared:
 
 let {animal, color, weight} = {animal: 'dog', color: 'black', weight: 10};
 
@@ -65,10 +64,10 @@ console.log(friends);//undefined
 
 let person4 = {name: "Sarah", country: "Nigeria", job: "Developer"};
 
-let {name:Mary, country:Ethiopia} = person4;
+let {name:firstName, country:place} = person4;
 
-console.log(Mary);
-console.log(Ethiopia);
+console.log(firstName); //Sarah
+console.log(place); //Nigeria
 //So the values extracted are passed to the new variables Mary and Ethiopia.
 
 

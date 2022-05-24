@@ -72,3 +72,16 @@ let add = function (...numbers) {
 
 add(1, 2) //3
 add(1, 44, 6, 9, 11, 122) // 193
+
+
+//The function below is the same as the one above. the difference is the curly braces after the for loop, which ends after the console log, and it threw me an error. Had to document it for future ref.
+let add = function(...numbers) {
+    let sum = 0;
+    for (let i = 0; i < numbers.length; i++) {
+        sum += numbers[i];
+        console.log(sum);
+
+}
+
+add(1, 2) //outputs 1, 3, 8, imstead of just 8. awhich means it returns the answer after the addition of each number, instead of the total after adding all the numbers. 
+

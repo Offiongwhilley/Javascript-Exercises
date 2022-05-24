@@ -32,19 +32,19 @@ console.log(name1);
 //SKIPPING ITEMS IN AN ARRAY
 //Skip the first and third items in the following array
 let skipArr = ["Hello", "I" , "am", "Sarah"];
-[,first,,third] = skipArr;
+[,second,,fourth] = skipArr;
 
-console.log(first, third);// I Sarah
+console.log(second, fourth);// I Sarah
 
 //If you log it the following way, it will return the full array with 'empty' replacing the elements you skipped, so you need to be careful
-console.log([,first,,third]); // [empty, 'I', empty, 'Sarah']
+console.log([,second,,fourth]); // [empty, 'I', empty, 'Sarah']
 
 
 //Noticed how the output returns single elements and not arrays? That's the "unpacking" that destructuring does.
 
 
 //THE REST OPERATOR(...)
-//What if we want to assign some of the array to variables and the rest of the items in an array to a particular variable? 
+//What if we want to assign some of the array to variables and the rest of the items in an array to a particular variable? You use the rest operator.
 
 //Unpack and assign the 2nd - last part of the following array to a variable.
 let restArr = ["Hello", "I" , "am", "Sarah"];
@@ -53,10 +53,10 @@ console.log(first); // Hello
 console.log(rest); //  ['I', 'am', 'Sarah']
 
 
-//THE SPREAD OPERATOR
+//More about the rest operator in the file, restOperator.js
 
 
-//DESTRUCTUTING ARRAYS WITH FUNCTIONS
+//DESTRUCTURING ARRAYS WITH FUNCTIONS
 //We can also extract data from an array returned from a function. Let's say we have a function that returns an array
 
 //Extract the first and second elements in the array returned from the following function
@@ -77,7 +77,7 @@ let defaultValue = [1, 2];
 [a = 3, b = 4, c = 5] = defaultValue;
 
 console.log(a,b,c); // 1, 2, 5
-//Notice that a and b maintain their value from the original array because their values already exist, while c takes up the default value because it never existed in the original array.
+//Notice that a and b maintain their value from the original array because their values already exist, while c takes up the default value assigned to it because it never existed in the original array.
 
 
 //SWAPPING VALUES USING THE DESTRUCTURING ASSIGNMENT
