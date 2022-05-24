@@ -83,5 +83,5 @@ let add = function(...numbers) {
 
 }
 
-add(1, 2) //outputs 1, 3, 8, imstead of just 8. awhich means it returns the answer after the addition of each number, instead of the total after adding all the numbers. 
+add(1, 2) //outputs 1, 3, 8, instead of just 8. Which means it returns the answer after the addition of each number, instead of the total after adding all the numbers. 
 
