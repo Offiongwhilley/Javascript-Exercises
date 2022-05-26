@@ -1,11 +1,13 @@
-// function countBs(string) {
-//     if (string.includes('B')) {
-//         let containsB = string.includes('B')
-//         return containsB
-//     }    
-// }
+let eatery1 = {
+    name:'mr. bigs',
+    numOfGuests: 20
+}
 
-// console.log(countBs('BuBBles'))
+let eatery2 = {
+    name: 'mr. fans',
+    owner:'okoronkwo'
+}
 
-const names = ["Hole-in-one!", "Eagle", "Birdie", "Par", "Bogey", "Double Bogey", "Go Home!"];
+eatery2.numOfGuests = eatery1.numOfGuests || 10;
 
+console.log(eatery2.numOfGuests);

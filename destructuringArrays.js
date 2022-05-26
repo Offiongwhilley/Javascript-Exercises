@@ -91,5 +91,7 @@ let b = 2;
 
 console.log(a, b); //2 1
 
-
-
+//you can split a string with array destructuring
+let fullName = 'Offiong Ekpenyong;'
+let [firstName, lastName] = fullName.split(0, 6,);
+console.log(firstName, lastName); // Offiong Ekpenyong
