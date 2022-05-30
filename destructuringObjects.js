@@ -20,7 +20,7 @@ let person2 = {name2: "Sarah", country2: "Nigeria", job2: "Developer"};
 //This will return error
 {name2, country2, job2} = person2;
 
-console.log(name2); //Unexpected token '='
+console.log(name2); //Returns an error: Unexpected token '='
 
 //We forgot to add () before the curly brackets.
 

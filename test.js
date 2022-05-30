@@ -1,13 +1,5 @@
-let eatery1 = {
-    name:'mr. bigs',
-    numOfGuests: 20
+function countBs(string, letter) {
+    console.log(string.split(letter).length-1);
 }
 
-let eatery2 = {
-    name: 'mr. fans',
-    owner:'okoronkwo'
-}
-
-eatery2.numOfGuests = eatery1.numOfGuests || 10;
-
-console.log(eatery2.numOfGuests);
+countBs('i am BubbBles', 'B')

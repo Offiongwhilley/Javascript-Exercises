@@ -95,3 +95,7 @@ console.log(a, b); //2 1
 let fullName = 'Offiong Ekpenyong;'
 let [firstName, lastName] = fullName.split(0, 6,);
 console.log(firstName, lastName); // Offiong Ekpenyong
+
+//or
+let [first, second] = fullName.split(' ')// space between the quotes
+console.log(first, second);
