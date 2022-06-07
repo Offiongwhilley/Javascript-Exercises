@@ -1,6 +1,11 @@
 // WHAT IS DESTRUCTURING ALL ABOUT?
 //The destructuring assignment is a cool feature that came along with ES6. Destructuring is a JavaScript expression that makes it possible to unpack values from arrays, or properties from objects, into distinct variables. That is, we can extract data from arrays and objects and assign them to variables.
 
+// ES6 makes destructuring arrays as easy as destructuring objects.
+// One key difference between the spread operator and array destructuring is that the spread operator unpacks all contents of an array into a comma-separated list. Consequently, you cannot pick or choose which elements you want to assign to variables.
+// Destructuring an array lets us do exactly that
+
+
 //In this file, the focus is on destructuring arrays
 
 //Rewrite the following array using  destructuring
@@ -99,3 +104,11 @@ console.log(firstName, lastName); // Offiong Ekpenyong
 //or
 let [first, second] = fullName.split(' ')// space between the quotes
 console.log(first, second);
+
+
+// Use destructuring assignment to swap the values of a and b so that a receives the value stored in b, and b receives the value stored in a.
+
+let a = 8, b = 6;
+// Only change code below this line
+
+[b, a] = [a, b]

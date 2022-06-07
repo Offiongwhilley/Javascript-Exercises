@@ -85,3 +85,14 @@ let add = function(...numbers) {
 
 add(1, 2) //outputs 1, 3, 8, instead of just 8. Which means it returns the answer after the addition of each number, instead of the total after adding all the numbers. 
 
+//Modify the function sum using the rest parameter in such a way that the function sum is able to take any number of arguments and return their sum.
+
+const sum = (x, y, z) => {
+    const args = [x, y, z];
+    return args.reduce((a, b) => a + b, 0);
+  }
+
+  //answer
+  const sum = (...args) => {
+    return args.reduce((a, b) => a + b, 0);
+  }
