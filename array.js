@@ -5,16 +5,24 @@
 //The nextInLine function should then return the element that was removed.
 
 function nextInLine(arr, item) {
-    arr.push(item);
-    let remove = arr.shift()
-    return remove;
-  }
-  
-  const testArr = [1, 2, 3, 4, 5];
+  arr.push(item);
+  let remove = arr.shift()
+  return remove;
+}
 
-  console.log(testArr);
+const testArr = [0, 1, 2, 3, 4, 5];
+const testNum = 6;
+console.log(nextInLine(testArr, testNum))  // 0
 
 
+function myFunc(arr, item) {
+  arr.push(item)
+  let result = arr.shift()
+  console.log(result)
+}
 
-  //
-  
+let myarr = [1, 2, 3]
+let mynum = 4
+
+myFunc(myarr, mynum) // 1
+

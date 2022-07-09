@@ -15,6 +15,7 @@ for (let i = 1; i <= 8; i++) {
 //a better solution
 
 let board = "";
+
 for(let i = 0; i < 8; i++){
  for(let a = 0; a < 8; a++){
   board += (a % 2) == (i % 2) ? " " : "#";

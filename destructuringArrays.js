@@ -18,7 +18,7 @@ console.log(name);//"Sarah"
 
 //My answer
 let introduction1 = ["Hello", "I" , "am", "Sarah"];
-[greeting1, , , name1] = introduction1;
+let [greeting1, , , name1] = introduction1;
 
 console.log(greeting1, name1); //Hello Sarah
 console.log(greeting1); // Hello
@@ -69,7 +69,7 @@ function getArray() {
     return ["Hello", "I" , "am", "Sarah"];
 }
 
-[a, b] = getArray()
+let [a, b] = getArray()
 console.log(a,b); // Hello I
 console.log(a); // Hello
 console.log(b); // I
@@ -79,7 +79,7 @@ console.log(b); // I
 // Default values can be assigned to the variables just in case the value extracted from the array is undefined:
 let defaultValue = [1, 2];
 
-[a = 3, b = 4, c = 5] = defaultValue;
+let [a = 3, b = 4, c = 5] = defaultValue;
 
 console.log(a,b,c); // 1, 2, 5
 //Notice that a and b maintain their value from the original array because their values already exist, while c takes up the default value assigned to it because it never existed in the original array.
@@ -106,9 +106,3 @@ let [first, second] = fullName.split(' ')// space between the quotes
 console.log(first, second);
 
 
-// Use destructuring assignment to swap the values of a and b so that a receives the value stored in b, and b receives the value stored in a.
-
-let a = 8, b = 6;
-// Only change code below this line
-
-[b, a] = [a, b]

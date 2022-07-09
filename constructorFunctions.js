@@ -33,13 +33,11 @@ bingo.greet() // This is bingo and she is black in color.
 
 
 // Basic Concepts to Know About JavaScript Constructors
-One essential thing to know is that you need to capitalize the name of constructors to distinguish them from regular functions.
-Another is that constructors call with the "new" operator.
-
-
-//   It should be noted that the class keyword declares a new function, to which a constructor is added. This constructor is invoked when new is called to create a new object.
-//   Note: UpperCamelCase should be used by convention for ES6 class names, as in SpaceShuttle used above.
-//   The constructor method is a special method for creating and initializing an object created with a class.
+// One essential thing to know is that you need to capitalize the name of constructors to distinguish them from regular functions.
+// Another is that constructors call with the "new" operator.
+// It should be noted that the class keyword declares a new function, to which a constructor is added. This constructor is invoked when new is called to create a new object.
+// Note: UpperCamelCase should be used by convention for ES6 class names, as in SpaceShuttle used above.
+// The constructor method is a special method for creating and initializing an object created with a class.
 
 //EXERCISE
 // // Only change code below this line

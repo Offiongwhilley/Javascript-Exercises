@@ -1,3 +1,4 @@
-import { add } from "./functions.js";
-
-add(1, 2)
+let twinkleStar = "Twinkle, twinkle, little star";
+let starRegex = /Twinkle/gi; // Change this line
+let result = twinkleStar.match(starRegex); // Change this line
+console.log(result);
