@@ -106,3 +106,14 @@ let [first, second] = fullName.split(' ')// space between the quotes
 console.log(first, second);
 
 
+// order food
+let foodMenu = {
+    appetizer: ['small chops', 'orange juice'],
+    mainCourse: ['coconut rice', 'amala and ewedu', 'rice and stew'],
+    dessert: ['cake', 'tigernut drink'],
+    orderFood: function (firstCourse, secondcourse, thirdCourse) {
+        console.log([this.appetizer[firstCourse], this.mainCourse[secondcourse], this.dessert[thirdCourse]]);
+    }
+}
+
+foodMenu.orderFood(0, 1, 1) //(3) ['small chops', 'amala and ewedu', 'tigernut drink']

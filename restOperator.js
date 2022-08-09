@@ -57,7 +57,7 @@ console.log(monday); //{time: '8am'}
 
 //USING THE REST OPERATOR IN FUNCTIONS
 
-//Imagine that you want to sum 100 arguements in a function. how do you add 100 arguements to a function? wont that be redundant andstressful?
+//Imagine that you want to sum 100 arguments in a function. How do you add 100 arguements to a function? Won't that be redundant and stressful?
 
 //Here's how to do it with the rest operator
 

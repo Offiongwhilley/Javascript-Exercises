@@ -63,7 +63,7 @@ console.log(result); // ['Twinkle', 'twinkle']
 
 
 // Match Anything with Wildcard Period
-// The wildcard character . will match any one character. The wildcard is also called dot and period. You can use the wildcard character just like any other character in the regex. For example, if you wanted to match hug, huh, hut, and hum, you can use the regex /hu./ to match all four words.
+// The wildcard character (.) will match any one character. The wildcard is also called dot and period. You can use the wildcard character just like any other character in the regex. For example, if you wanted to match hug, huh, hut, and hum, you can use the regex /hu./ to match all four words.
 
 let humStr = "I'll hum a song";
 let hugStr = "Bear hug";
@@ -77,6 +77,7 @@ huRegex.test(hugStr);
 let exampleStr = "Let's have fun with regular expressions!";
 let unRegex = /un./; // Change this line
 let result = unRegex.test(exampleStr);
+
 
 // Match Single Character with Multiple Possibilities
 // You can search for a literal pattern with some flexibility with character classes. Character classes allow you to define a group of characters you wish to match by placing them inside square ([ and ]) brackets.
@@ -94,7 +95,6 @@ bigStr.match(bgRegex);
 bagStr.match(bgRegex);
 bugStr.match(bgRegex);
 bogStr.match(bgRegex);
-// 
 
 // Use a character class with vowels (a, e, i, o, u) in your regex vowelRegex to find all the vowels in the string quoteSample.
 // Note: Be sure to match both upper- and lowercase vowels.
@@ -137,23 +137,6 @@ let jennyStr = "Jenny8675309";
 let myRegex = /[a-z0-9]/ig;
 jennyStr.match(myRegex);
 
-// Create a single regex that matches a range of letters between h and s, and a range of numbers between 2 and 6. Remember to include the appropriate flags in the regex.
-
-let quoteSample = "Blueberry 3.141592653s are delicious.";
-let myRegex = /[h-s2-6]/gi; // Change this line
-let result = quoteSample.match(myRegex); // Change this line
-
-
-// Match Numbers and Letters of the Alphabet
-// Using the hyphen (-) to match a range of characters is not limited to letters. It also works to match a range of numbers.
-
-// For example, /[0-5]/ matches any number between 0 and 5, including the 0 and 5.
-
-// Also, it is possible to combine a range of letters and numbers in a single character set.
-
-// let jennyStr = "Jenny8675309";
-// let myRegex = /[a-z0-9]/ig;
-// jennyStr.match(myRegex);
 // Create a single regex that matches a range of letters between h and s, and a range of numbers between 2 and 6. Remember to include the appropriate flags in the regex.
 
 let quoteSample = "Blueberry 3.141592653s are delicious.";

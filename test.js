@@ -1,4 +1,7 @@
-let twinkleStar = "Twinkle, twinkle, little star";
-let starRegex = /Twinkle/gi; // Change this line
-let result = twinkleStar.match(starRegex); // Change this line
-console.log(result);
+let numbers = [1234, 123, 12, 1];
+
+for (let i = 0; i <= numbers.length; i++) {
+    console.log(numbers[i]);    
+}
+
+console.log('a');
