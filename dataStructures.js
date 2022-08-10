@@ -1,32 +1,3 @@
-//Write a function nextInLine which takes an array (arr) and a number (item) as arguments.
-
-//Add the number to the end of the array, then remove the first element of the array.
-
-//The nextInLine function should then return the element that was removed.
-
-function nextInLine(arr, item) {
-  arr.push(item);
-  let remove = arr.shift()
-  return remove;
-}
-
-const testArr = [0, 1, 2, 3, 4, 5];
-const testNum = 6;
-console.log(nextInLine(testArr, testNum))  // 0
-
-
-function myFunc(arr, item) {
-  arr.push(item)
-  let result = arr.shift()
-  console.log(result)
-}
-
-let myarr = [1, 2, 3]
-let mynum = 4
-
-myFunc(myarr, mynum) // 1
-
-
 //Add Items to an Array with push() and unshift()
 // An array's length, like the data types it can contain, is not fixed. Arrays can be defined with a length of any number of elements, and elements can be added or removed over time; in other words, arrays are mutable. In this challenge, we will look at two methods with which we can programmatically modify an array: Array.push() and Array.unshift().
 
@@ -170,5 +141,38 @@ function htmlColorNames(arr) {
 }
 
 console.log(htmlColorNames(['DarkGoldenRod', 'WhiteSmoke', 'LavenderBlush', 'PaleTurquoise', 'FireBrick']));
+
+//answer
+function htmlColorNames(arr) {
+  // Only change code below this line
+arr.splice(0, 2, 'DarkSalmon', 'BlanchedAlmond')
+  // Only change code above this line
+  return arr;
+}
+
+console.log(htmlColorNames(['DarkGoldenRod', 'WhiteSmoke', 'LavenderBlush', 'PaleTurquoise', 'FireBrick']));
+
+
+
+//Copy Array Items Using slice()
+// The next method we will cover is slice(). Rather than modifying an array, slice() copies or extracts a given number of elements to a new array, leaving the array it is called upon untouched. slice() takes only 2 parameters — the first is the index at which to begin extraction, and the second is the index at which to stop extraction (extraction will occur up to, but not including the element at this index). Consider this:
+
+let weatherConditions = ['rain', 'snow', 'sleet', 'hail', 'clear'];
+
+let todaysWeather = weatherConditions.slice(1, 3);
+// todaysWeather would have the value ['snow', 'sleet'], while weatherConditions would still have ['rain', 'snow', 'sleet', 'hail', 'clear'].
+
+// In effect, we have created a new array by extracting elements from an existing array.
+
+// We have defined a function, forecast, that takes an array as an argument. Modify the function using slice() to extract information from the argument array and return a new array that contains the string elements warm and sunny.
+
+function forecast(arr) {
+  // Only change code below this line
+
+  return arr;
+}
+
+// Only change code above this line
+console.log(forecast(['cold', 'rainy', 'warm', 'sunny', 'cool', 'thunderstorms']));
 
 //answer
