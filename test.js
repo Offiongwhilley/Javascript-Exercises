@@ -1,7 +1,24 @@
-let numbers = [1234, 123, 12, 1];
+let complexArray = [
+    [
+      {
+        one: 1,
+        two: 2
+      },
+      {
+        three: 3,
+        four: 4
+      }
+    ],
+    [
+      {
+        a: "a",
+        b: "b"
+      },
+      {
+        c: "c",
+        d: "d"
+      }
+    ]
+  ];
 
-for (let i = 0; i <= numbers.length; i++) {
-    console.log(numbers[i]);    
-}
-
-console.log('a');
+  console.log(complexArray.length);
