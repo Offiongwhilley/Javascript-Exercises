@@ -36,3 +36,12 @@ function countBs(string, letter) {
 }
 
 countBs('i am BubbBles', 'B')
+
+
+//convert string to upper case
+let myStr = 'hello world'
+console.log(myStr.toUpperCase());
+
+//convert string to lower case
+let myStr2 = 'HELLO WORLD'
+console.log(myStr2.toLowerCase());

@@ -7,7 +7,7 @@ let twentyThree = 'XXIII';
 let romanNumerals = ['XXI', 'XXII'];
 
 romanNumerals.unshift('XIX', 'XX');
-romanNumerals would have the value ['XIX', 'XX', 'XXI', 'XXII'].
+// romanNumerals would have the value ['XIX', 'XX', 'XXI', 'XXII'].
 
 romanNumerals.push(twentyThree);
 // romanNumerals would have the value ['XIX', 'XX', 'XXI', 'XXII', 'XXIII']. Notice that we can also pass variables, which allows us even greater flexibility in dynamically modifying our array's data.
@@ -164,6 +164,17 @@ let todaysWeather = weatherConditions.slice(1, 3);
 
 // In effect, we have created a new array by extracting elements from an existing array.
 
+//When the end index is not given, slice will take all of the elements after the start index. You can also omit the start index to copy the entire array. 
+
+//The concat method can be used to glue arrays together to create a new array, similar to what the + operator does for strings. The following example shows both concat and slice in action. It takes an array and an index, and it returns a new array that is a copy of the original array with the element at the given index removed.
+
+function remove(array, index) {
+   return array.slice(0, index) 
+   .concat(array.slice(index + 1)); 
+  } 
+  
+  console.log(remove(["a", "b", "c", "d", "e"], 2)); // → ["a", "b", "d", "e"]
+
 // We have defined a function, forecast, that takes an array as an argument. Modify the function using slice() to extract information from the argument array and return a new array that contains the string elements warm and sunny.
 
 function forecast(arr) {
@@ -176,3 +187,195 @@ function forecast(arr) {
 console.log(forecast(['cold', 'rainy', 'warm', 'sunny', 'cool', 'thunderstorms']));
 
 //answer
+function forecast(arr) {
+  // Only change code below this line
+let newArr = arr.slice(2,4)
+  return newArr;
+}
+
+// Only change code above this line
+console.log(forecast(['cold', 'rainy', 'warm', 'sunny', 'cool', 'thunderstorms']));
+
+
+
+// Copy an Array with the Spread Operator
+// While slice() allows us to be selective about what elements of an array to copy, among several other useful tasks, ES6's new spread operator allows us to easily copy all of an array's elements, in order, with a simple and highly readable syntax. The spread syntax simply looks like this: ...
+
+// In practice, we can use the spread operator to copy an array like so:
+
+let thisArray = [true, true, undefined, false, null];
+let thatArray = [...thisArray];
+// thatArray equals [true, true, undefined, false, null]. thisArray remains unchanged and thatArray contains the same elements as thisArray.
+
+// We have defined a function, copyMachine which takes arr (an array) and num (a number) as arguments. The function is supposed to return a new array made up of num copies of arr. We have done most of the work for you, but it doesn't work quite right yet. Modify the function using spread syntax so that it works correctly (hint: another method we have already covered might come in handy here!).
+
+function copyMachine(arr, num) {
+  let newArr = [];
+  while (num >= 1) {
+    // Only change code below this line
+
+    // Only change code above this line
+    num--;
+  }
+  return newArr;
+}
+
+console.log(copyMachine([true, false, true], 2));
+
+//answer
+function copyMachine(arr, num) {
+  let newArr = [];
+  while (num >= 1) {
+    // Only change code below this line
+newArr.push([...arr])
+    // Only change code above this line
+    num--;
+  }
+  return newArr;
+}
+
+console.log(copyMachine([true, false, true], 2));
+
+
+
+//Check For The Presence of an Element With indexOf()
+// Since arrays can be changed, or mutated, at any time, there's no guarantee about where a particular piece of data will be on a given array, or if that element even still exists. Luckily, JavaScript provides us with another built-in method, indexOf(), that allows us to quickly and easily check for the presence of an element on an array. indexOf() takes an element as a parameter, and when called, it returns the position, or index, of that element, or -1 if the element does not exist on the array.
+
+// For example:
+
+let fruits = ['apples', 'pears', 'oranges', 'peaches', 'pears'];
+
+fruits.indexOf('dates');
+fruits.indexOf('oranges');
+fruits.indexOf('pears');
+// indexOf('dates') returns -1, indexOf('oranges') returns 2, and indexOf('pears') returns 1 (the first index at which each element exists).
+
+// indexOf() can be incredibly useful for quickly checking for the presence of an element on an array. We have defined a function, quickCheck, that takes an array and an element as arguments. Modify the function using indexOf() so that it returns true if the passed element exists on the array, and false if it does not.
+
+function quickCheck(arr, elem) {
+  // Only change code below this line
+
+  // Only change code above this line
+}
+
+console.log(quickCheck(['squash', 'onions', 'shallots'], 'mushrooms'));
+
+//answer
+function quickCheck(arr, elem) {
+  // Only change code below this line
+if (arr.indexOf(elem) >= 0) {
+  return true;
+} else {
+  return false;
+}
+  // Only change code above this line
+}
+
+console.log(quickCheck(['squash', 'onions', 'shallots'], 'mushrooms'));
+
+
+
+// greaterThanTen([2, 12, 8, 14, 80, 0, 1]);
+// Using a for loop, this function iterates through and accesses each element of the array, and subjects it to a simple test that we have created. In this way, we have easily and programmatically determined which data items are greater than 10, and returned a new array, [12, 14, 80], containing those items.
+
+// We have defined a function, filteredArray, which takes arr, a nested array, and elem as arguments, and returns a new array. elem represents an element that may or may not be present on one or more of the arrays nested within arr. Modify the function, using a for loop, to return a filtered version of the passed array such that any array nested within arr containing elem has been removed.
+
+function filteredArray(arr, elem) {
+  let newArr = [];
+  // Only change code below this line
+
+  // Only change code above this line
+  return newArr;
+}
+
+console.log(filteredArray([[3, 2, 3], [1, 6, 3], [3, 13, 26], [19, 3, 9]], 3));
+
+//answer
+function filteredArray(arr, elem) {
+  let newArr = [];
+  // change code below this line
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i].indexOf(elem) == -1) {
+      //Checks every parameter for the element and if is NOT there continues the code
+      newArr.push(arr[i]); //Inserts the element of the array in the new filtered array
+    }
+  }
+
+  // change code above this line
+  return newArr;
+}
+// change code here to test different cases:
+console.log(filteredArray([[3, 2, 3], [1, 6, 3], [3, 13, 26], [19, 3, 9]], 3));
+
+
+
+
+// Check if an Object has a Property
+// Now we can add, modify, and remove keys from objects. But what if we just wanted to know if an object has a specific property? JavaScript provides us with two different ways to do this. One uses the hasOwnProperty() method and the other uses the in keyword. If we have an object users with a property of Alan, we could check for its presence in either of the following ways:
+
+users.hasOwnProperty('Alan');
+'Alan' in users;
+// Both of these would return true.
+
+// Finish writing the function so that it returns true if the object passed to it contains all four names, Alan, Jeff, Sarah and Ryan and returns false otherwise.
+
+let users = {
+  Alan: {
+    age: 27,
+    online: true
+  },
+  Jeff: {
+    age: 32,
+    online: true
+  },
+  Sarah: {
+    age: 48,
+    online: true
+  },
+  Ryan: {
+    age: 19,
+    online: true
+  }
+};
+
+function isEveryoneHere(userObj) {
+  // Only change code below this line
+  
+  // Only change code above this line
+}
+
+console.log(isEveryoneHere(users));
+
+//answer
+let users = {
+  Alan: {
+    age: 27,
+    online: true
+  },
+  Jeff: {
+    age: 32,
+    online: true
+  },
+  Sarah: {
+    age: 48,
+    online: true
+  },
+  Ryan: {
+    age: 19,
+    online: true
+  }
+};
+
+function isEveryoneHere(userObj) {
+  // Only change code below this line
+  if('Alan' in userObj && 'Jeff' in userObj && 'Sarah' in userObj && 'Ryan' in userObj){
+    return true;
+  }
+  else{
+    return false;
+  }
+  // Only change code above this line
+}
+
+console.log(isEveryoneHere(users));
