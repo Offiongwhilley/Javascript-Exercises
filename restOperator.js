@@ -96,3 +96,11 @@ const sum = (x, y, z) => {
   const sum = (...args) => {
     return args.reduce((a, b) => a + b, 0);
   }
+
+
+
+  //check max value with rest parameter
+  let numbers = [4, 5, 7, 9]
+
+console.log(Math.max(...numbers)); //9
+
