@@ -1,6 +1,12 @@
-function frankenSplice(arr1, arr2) {
-    arr2 = arr1.slice()
-    return arr2;
-  }
-  
-  console.log(frankenSplice([11, 22, 33], [4, 5, 6]));
+function Dog(name) {
+  this.name = name;
+  this.color = 'brown'
+}
+Dog.prototype.numLegs = 2
+
+
+// Only change code above this line
+let beagle = new Dog("Snoopy");
+
+console.log(beagle); // Dog {name: 'Snoopy'}
+console.log(beagle.numLegs); // 2

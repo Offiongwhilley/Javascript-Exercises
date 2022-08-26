@@ -356,3 +356,122 @@ function frankenSplice(arr1, arr2, n) {
   }
   return localArray;
 }
+
+
+
+//Falsy Bouncer
+// Remove all falsy values from an array.
+
+// Falsy values in JavaScript are false, null, 0, "", undefined, and NaN.
+
+// Hint: Try converting each value to a Boolean.
+function bouncer(arr) {
+  return arr;
+}
+
+bouncer([7, "ate", "", false, 9]);
+
+//my attempt
+function bouncer(arr) {
+  for(let i = 0; i < arr; i++){
+    if(typeof arr[i] == 'boolean'){
+      arr.remove(i)
+    }
+  }
+  return arr;
+}
+
+bouncer([7, "ate", "", false, 9]);
+
+//answer
+//create a new empty array
+//check that it doesn't have a falsy value
+//if true, push to new array
+//return new array
+function bouncer(arr) {
+  let newArr = [];
+
+  for(let i = 0; i < arr.length; i++){
+    if(arr[i]){
+      newArr.push(arr[i])
+    }
+  }
+  return newArr;
+}
+
+bouncer([7, "ate", "", false, 9]);
+
+
+
+//Where do I Belong
+// Return the lowest index at which a value (second argument) should be inserted into an array (first argument) once it has been sorted. The returned value should be a number.
+
+// For example, getIndexToIns([1,2,3,4], 1.5) should return 1 because it is greater than 1 (index 0), but less than 2 (index 1).
+
+// Likewise, getIndexToIns([20,3,5], 19) should return 2 because once the array has been sorted it will look like [3,5,20] and 19 is less than 20 (index 2) and greater than 5 (index 1).
+
+function getIndexToIns(arr, num) {
+  return arr;
+}
+
+getIndexToIns([40, 60], 50);
+
+//answer
+// Problem Explanation
+// This can be a tricky problem to understand. You need to find where in the array a number should be inserted by order, and return the index where it should go.
+
+// Hint 1
+// The first thing to do is sort the array from lower to bigger, just to make the code easier. This is where sort comes in, it needs a callback function so you have to create it.
+
+// Hint 2
+// Once the array is sorted, then just check for the first number that is bigger and return the index.
+
+// Hint 3
+// If there is no index for that number then you will have to deal with that case too.
+
+Solution
+function getIndexToIns(arr, num) {
+  arr.sort((a, b) => a - b);
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] >= num)
+      return i;
+  }
+
+  return arr.length;
+}
+// Code Explanation
+// First I sort the array using .sort(callbackFunction) to sort it by lowest to highest, from left to right.
+// Then I use a for loop to compare the items in the array starting from the smallest one. When an item on the array is greater than the number we are comparing against, then we return the index.
+
+
+
+//Chunky Monkey
+Write a function that splits an array (first argument) into groups the length of size (second argument) and returns them as a two-dimensional array.
+
+function chunkArrayInGroups(arr, size) {
+  return arr;
+}
+
+chunkArrayInGroups(["a", "b", "c", "d"], 2);
+
+//answer
+function chunkArrayInGroups(arr, size) {
+  let temp = [];
+let result = [];
+
+for (let a = 0; a < arr.length; a++) {
+  if (a % size !== size - 1) temp.push(arr[a]);
+  else {
+    temp.push(arr[a]);
+    result.push(temp);
+    temp = [];
+  }
+}
+
+if (temp.length !== 0) result.push(temp);
+
+return result;
+}
+
+chunkArrayInGroups(["a", "b", "c", "d"], 2);
